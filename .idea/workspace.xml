@@ -4,16 +4,16 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="414e8b74-2cc5-4c17-b13c-6b102d497cd2" name="Changes" comment="Add Plugin for hive and provider">
-      <change afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/Dashboard/dashboard.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/Model/UserModel.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/Reprository/UserReprository.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/Routes/AppRoutes.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/View/Widgetes/ButtonWidgets.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/View/app_screen/splash_screen.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/ViewModel/UserViewModel.dart" afterDir="false" />
+    <list default="true" id="414e8b74-2cc5-4c17-b13c-6b102d497cd2" name="Changes" comment="Create Packages And files">
+      <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/android/local.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/medi_slot_android.iml" beforeDir="false" afterPath="$PROJECT_DIR$/android/medi_slot_android.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Dashboard/dashboard.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Dashboard/dashboard.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/View/app_screen/splash_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/View/app_screen/splash_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,44 +23,63 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dart File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "saurabhkharade"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;saurabhkharade&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/saurabhkharade/medi_slot.git",
-    "accountId": "331a799b-9077-46f3-971d-3ac2d93c85b2"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/saurabhkharade/medi_slot.git&quot;,
+    &quot;accountId&quot;: &quot;331a799b-9077-46f3-971d-3ac2d93c85b2&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="36wEPn6aYw3WdszYvlmMImVUuGl" />
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Flutter.main.dart.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.readMode.enableVisualFormatting": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "dart.analysis.tool.window.visible": "false",
     "git-widget-placeholder": "master",
     "io.flutter.project.isFirstOpen": "true",
+    "io.flutter.reload.alreadyRun": "true",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "E:/Android Projects/medi_slot/lib",
     "show.migrate.to.gradle.popup": "false"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Android Projects\medi_slot\lib" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Android Projects\medi_slot\lib\View\Widgetes" />
+    </key>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="414e8b74-2cc5-4c17-b13c-6b102d497cd2" name="Changes" comment="" />
@@ -85,12 +104,21 @@
       <option name="project" value="LOCAL" />
       <updated>1765909751289</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Create Packages And files">
+      <option name="closed" value="true" />
+      <created>1765910075646</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1765910075646</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="Add Plugin for hive and provider" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Plugin for hive and provider" />
+    <MESSAGE value="Create Packages And files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create Packages And files" />
   </component>
 </project>
