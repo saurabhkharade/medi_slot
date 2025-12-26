@@ -29,7 +29,7 @@ class _UserRegistrationState extends State<UserRegistration> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CommonAppBar(title: "User Registration"),
+      appBar: CommonAppBar(title: "User Registration",subtitle: "Good Morning ",),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(10),
         child: Column(
