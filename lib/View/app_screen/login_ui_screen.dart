@@ -6,9 +6,9 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: Stack(
-        children: const [
+        children: [
           _GradientBackground(),
           _LoginCard(),
         ],
@@ -28,7 +28,7 @@ class _GradientBackground extends StatelessWidget {
       decoration: const BoxDecoration(
         gradient: LinearGradient(
           colors: [
-            Color(0xFF1E88E5),
+            Color(0xFF1565C0),
             Color(0xFF42A5F5),
           ],
           begin: Alignment.topLeft,
@@ -41,59 +41,82 @@ class _GradientBackground extends StatelessWidget {
 
 /* -------------------- Login Card -------------------- */
 
-class _LoginCard extends StatelessWidget {
+class _LoginCard extends StatefulWidget {
   const _LoginCard();
+
+  @override
+  State<_LoginCard> createState() => _LoginCardState();
+}
+
+class _LoginCardState extends State<_LoginCard> {
+  bool obscurePassword = true;
 
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Padding(
+      child: SingleChildScrollView(
         padding: const EdgeInsets.all(20),
         child: ClipRRect(
-          borderRadius: BorderRadius.circular(24),
+          borderRadius: BorderRadius.circular(26),
           child: BackdropFilter(
-            filter: ImageFilter.blur(sigmaX: 12, sigmaY: 12),
+            filter: ImageFilter.blur(sigmaX: 14, sigmaY: 14),
             child: Container(
-              padding: const EdgeInsets.all(24),
+              padding: const EdgeInsets.all(26),
               decoration: BoxDecoration(
-                color: Colors.white.withOpacity(0.85),
-                borderRadius: BorderRadius.circular(24),
+                color: Colors.white.withOpacity(0.88),
+                borderRadius: BorderRadius.circular(26),
               ),
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   const _Logo(),
-                  const SizedBox(height: 16),
+                  const SizedBox(height: 18),
+
                   const Text(
                     "MediSlot",
                     style: TextStyle(
-                      fontSize: 26,
+                      fontSize: 28,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
+
                   const SizedBox(height: 6),
+
                   const Text(
                     "Smart medical appointment booking",
                     textAlign: TextAlign.center,
-                    style: TextStyle(fontSize: 14, color: Colors.grey),
+                    style: TextStyle(
+                      fontSize: 14,
+                      color: Colors.grey,
+                    ),
                   ),
-                  const SizedBox(height: 28),
+
+                  const SizedBox(height: 30),
 
                   _buildTextField(
                     hint: "Email address",
                     icon: Icons.email_outlined,
                     keyboardType: TextInputType.emailAddress,
                   ),
+
                   const SizedBox(height: 16),
 
                   _buildTextField(
                     hint: "Password",
                     icon: Icons.lock_outline,
-                    obscureText: true,
-                    suffixIcon: Icons.visibility_off_outlined,
+                    obscureText: obscurePassword,
+                    suffixIcon: obscurePassword
+                        ? Icons.visibility_off_outlined
+                        : Icons.visibility_outlined,
+                    onSuffixTap: () {
+                      setState(() {
+                        obscurePassword = !obscurePassword;
+                      });
+                    },
                   ),
 
                   const SizedBox(height: 12),
+
                   Align(
                     alignment: Alignment.centerRight,
                     child: TextButton(
@@ -105,9 +128,11 @@ class _LoginCard extends StatelessWidget {
                     ),
                   ),
 
-                  const SizedBox(height: 16),
-                  _LoginButton(),
-                  const SizedBox(height: 20),
+                  const SizedBox(height: 18),
+
+                  const _LoginButton(),
+
+                  const SizedBox(height: 22),
 
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -143,27 +168,27 @@ class _Logo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 80,
-      width: 80,
+      height: 84,
+      width: 84,
       decoration: BoxDecoration(
         shape: BoxShape.circle,
         gradient: LinearGradient(
           colors: [
-            Colors.blue.shade600,
+            Colors.blue.shade700,
             Colors.blue.shade400,
           ],
         ),
       ),
       child: const Icon(
         Icons.local_hospital,
-        size: 42,
+        size: 44,
         color: Colors.white,
       ),
     );
   }
 }
 
-/* -------------------- Reusable Widgets -------------------- */
+/* -------------------- TextField -------------------- */
 
 Widget _buildTextField({
   required String hint,
@@ -171,6 +196,7 @@ Widget _buildTextField({
   bool obscureText = false,
   IconData? suffixIcon,
   TextInputType keyboardType = TextInputType.text,
+  VoidCallback? onSuffixTap,
 }) {
   return TextField(
     keyboardType: keyboardType,
@@ -178,7 +204,12 @@ Widget _buildTextField({
     decoration: InputDecoration(
       hintText: hint,
       prefixIcon: Icon(icon),
-      suffixIcon: suffixIcon != null ? Icon(suffixIcon) : null,
+      suffixIcon: suffixIcon != null
+          ? IconButton(
+        icon: Icon(suffixIcon),
+        onPressed: onSuffixTap,
+      )
+          : null,
       filled: true,
       fillColor: Colors.grey.shade100,
       border: OutlineInputBorder(
@@ -192,16 +223,18 @@ Widget _buildTextField({
 /* -------------------- Login Button -------------------- */
 
 class _LoginButton extends StatelessWidget {
+  const _LoginButton();
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
-      height: 50,
+      height: 52,
       child: ElevatedButton(
         onPressed: () {},
         style: ElevatedButton.styleFrom(
-          elevation: 4,
           backgroundColor: Colors.blue.shade700,
+          elevation: 5,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(14),
           ),
@@ -211,7 +244,7 @@ class _LoginButton extends StatelessWidget {
           style: TextStyle(
             fontSize: 16,
             fontWeight: FontWeight.bold,
-            letterSpacing: 1,
+            letterSpacing: 1.1,
           ),
         ),
       ),
